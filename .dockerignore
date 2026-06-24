@@ -1,5 +1,13 @@
 **/node_modules
+**/.output
 **/dist
 **/.turbo
 **/.tmp
 .git
+.agents
+.codex
+.scratch
+.turbo
+coverage
+dist
+node_modules

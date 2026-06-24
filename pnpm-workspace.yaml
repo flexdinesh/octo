@@ -10,6 +10,7 @@ minimumReleaseAgeExclude: []
 trustPolicy: no-downgrade
 trustPolicyExclude:
   - nanoid
+  - semver
 trustLockfile: false
 
 blockExoticSubdeps: true
