@@ -18,7 +18,7 @@ FROM node:26-slim AS runner
 
 ENV HOST=0.0.0.0
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=8088
 
 WORKDIR /app
 
@@ -26,6 +26,6 @@ COPY --from=builder --chown=node:node /repo/apps/web/.output ./.output
 
 USER node
 
-EXPOSE 3000
+EXPOSE 8088
 
 CMD ["node", ".output/server/index.mjs"]
