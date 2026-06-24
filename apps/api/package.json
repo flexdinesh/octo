@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --watch src/main.ts",
+    "start": "node src/main.ts",
+    "test": "mkdir -p .tmp && TMPDIR=$PWD/.tmp vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "fastify": "5.8.5",
+    "pino": "10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.0.0",
+    "vitest": "4.1.9"
+  }
+}

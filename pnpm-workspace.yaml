@@ -8,12 +8,14 @@ minimumReleaseAgeIgnoreMissingTime: false
 minimumReleaseAgeExclude: []
 
 trustPolicy: no-downgrade
-trustPolicyExclude: []
+trustPolicyExclude:
+  - nanoid
 trustLockfile: false
 
 blockExoticSubdeps: true
 strictDepBuilds: true
-allowBuilds: {}
+allowBuilds:
+  esbuild: true
 dangerouslyAllowAllBuilds: false
 
 verifyDepsBeforeRun: install
