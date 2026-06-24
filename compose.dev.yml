@@ -8,3 +8,12 @@ services:
       PORT: 3000
     ports:
       - "3000:3000"
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8088
+    ports:
+      - "8088:8088"
