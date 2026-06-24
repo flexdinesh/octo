@@ -1,20 +1,23 @@
 {
   "name": "octo",
   "private": true,
-  "packageManager": "pnpm@11.8.0",
-  "engines": {
-    "node": ">=26"
-  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "typecheck": "turbo run typecheck",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "lint": "oxlint --no-error-on-unmatched-pattern .",
+    "lint:fix": "oxlint --fix --no-error-on-unmatched-pattern ."
   },
   "devDependencies": {
-    "prettier": "3.8.4",
+    "oxfmt": "0.55.0",
+    "oxlint": "1.70.0",
     "turbo": "2.9.18",
     "typescript": "6.0.3"
-  }
+  },
+  "engines": {
+    "node": ">=26"
+  },
+  "packageManager": "pnpm@11.8.0"
 }

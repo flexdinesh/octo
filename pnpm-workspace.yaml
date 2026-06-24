@@ -1,3 +1,21 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+minimumReleaseAge: 4320
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+minimumReleaseAgeExclude: []
+
+trustPolicy: no-downgrade
+trustPolicyExclude: []
+trustLockfile: false
+
+blockExoticSubdeps: true
+strictDepBuilds: true
+allowBuilds: {}
+dangerouslyAllowAllBuilds: false
+
+verifyDepsBeforeRun: install
+strictSsl: true
+lockfile: true

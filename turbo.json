@@ -12,7 +12,10 @@
     "typecheck": {
       "dependsOn": ["^typecheck"]
     },
-    "format": {
+    "fmt": {
+      "cache": false
+    },
+    "lint": {
       "cache": false
     }
   }
