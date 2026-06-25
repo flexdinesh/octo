@@ -4,3 +4,4 @@ coverage
 .turbo
 .tmp
 .output
+apps/api/data

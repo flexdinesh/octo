@@ -4,17 +4,29 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json --noEmit",
+    "db:generate:sqlite": "drizzle-kit generate --config drizzle.config.sqlite.ts",
+    "db:generate:postgres": "drizzle-kit generate --config drizzle.config.postgres.ts",
+    "db:migrate:sqlite": "mkdir -p data && drizzle-kit migrate --config drizzle.config.sqlite.ts",
+    "db:migrate:postgres": "drizzle-kit migrate --config drizzle.config.postgres.ts",
+    "db:seed": "node src/storage/seed.ts",
     "dev": "node --watch src/main.ts",
     "start": "node src/main.ts",
     "test": "mkdir -p .tmp && TMPDIR=$PWD/.tmp vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "better-sqlite3": "12.11.1",
+    "drizzle-orm": "0.45.2",
     "fastify": "5.8.5",
+    "pg": "8.22.0",
     "pino": "10.3.1"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
     "@types/node": "26.0.0",
+    "@types/pg": "8.20.0",
+    "drizzle-kit": "0.31.10",
+    "tsx": "4.22.4",
     "vitest": "4.1.9"
   }
 }
